@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProjetoPOOController">
+   <children>
+      <AnchorPane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="358.0" visible="false">
+         <children>
+            <Label layoutX="85.0" layoutY="169.0" text="Label" />
+            <Label layoutX="85.0" layoutY="205.0" text="Label" />
+            <TextField layoutX="136.0" layoutY="165.0" />
+            <TextField layoutX="136.0" layoutY="201.0" />
+            <Label layoutX="37.0" layoutY="40.0" text="Gerenciamento para Apicultores">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnOK" layoutX="132.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnOKClicked" text="OK" />
+            <Button layoutX="198.0" layoutY="271.0" mnemonicParsing="false" text="SAIR" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="funcionarios" prefHeight="559.0" prefWidth="358.0" visible="false">
+         <children>
+            <TextField fx:id="matriculaFuncionario" layoutX="52.0" layoutY="95.0" prefHeight="25.0" prefWidth="179.0" promptText="Matricula" />
+            <TextField fx:id="nomeFuncionario" layoutX="52.0" layoutY="136.0" prefHeight="25.0" prefWidth="179.0" promptText="Nome" />
+            <TextField fx:id="emailFuncionario" layoutX="52.0" layoutY="183.0" prefHeight="25.0" prefWidth="179.0" promptText="E-mail" />
+            <Label layoutX="123.0" layoutY="41.0" text="Funcionários">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBuscarFuncionario" layoutX="268.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnBuscarFuncionario" text="Buscar" />
+            <Button fx:id="btnIncluirFuncionario" layoutX="269.0" layoutY="161.0" mnemonicParsing="false" onAction="#btnIncluirFuncionarioClicked" text="Incluir" />
+            <TextArea layoutX="27.0" layoutY="266.0" prefHeight="200.0" prefWidth="304.0" />
+            <Button fx:id="btnAlterarFuncioario" layoutX="40.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnAlterarFuncionario" prefHeight="25.0" prefWidth="77.0" text="Alterar" />
+            <Button fx:id="btnBuscaGeralFuncionario" layoutX="125.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnBuscaGeralFuncionario" prefHeight="25.0" prefWidth="108.0" text="Busca geral" />
+            <Button fx:id="btnExcluirFuncionario" layoutX="242.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnExcluirFuncionario" prefHeight="25.0" prefWidth="77.0" text="Excluir" />
+            <Button layoutX="49.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnColmeiaClicked" prefHeight="30.0" prefWidth="108.0" text="Colmeia" />
+            <Button layoutX="202.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnProducaoClicked" prefHeight="30.0" prefWidth="108.0" text="Produção" />
+            <Label fx:id="avisoTexto" layoutX="49.0" layoutY="208.0" prefHeight="17.0" prefWidth="268.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="colmeias" prefHeight="559.0" prefWidth="358.0" visible="false">
+         <children>
+            <TextField fx:id="IDColmeia" layoutX="52.0" layoutY="90.0" prefHeight="25.0" prefWidth="179.0" promptText="ID" />
+            <TextField fx:id="tipoColmeia" layoutX="52.0" layoutY="131.0" prefHeight="25.0" prefWidth="179.0" promptText="Tipo" />
+            <Button layoutX="255.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnBuscarColmeia" text="Buscar" />
+            <Button layoutX="256.0" layoutY="152.0" mnemonicParsing="false" onAction="#btnIncluirColmeia" text="Incluir" />
+            <TextArea layoutX="27.0" layoutY="266.0" prefHeight="200.0" prefWidth="304.0" />
+            <Button layoutX="40.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnAlterarColmeia" prefHeight="25.0" prefWidth="77.0" text="Alterar" />
+            <Button layoutX="125.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnBuscaGeralColmeia" prefHeight="25.0" prefWidth="108.0" text="Busca geral" />
+            <Button layoutX="242.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnExcluirColmeia" prefHeight="25.0" prefWidth="77.0" text="Excluir" />
+            <Button layoutX="49.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnFuncionarioClicked" prefHeight="30.0" prefWidth="108.0" text="Funcionários" />
+            <Button layoutX="202.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnProducaoClicked" prefHeight="30.0" prefWidth="108.0" text="Produção" />
+            <Label layoutX="139.0" layoutY="40.0" text="Colmeias">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoTextoColmeia" layoutX="59.0" layoutY="204.0" prefHeight="17.0" prefWidth="241.0" />
+            <TextField fx:id="statusColmeia" layoutX="52.0" layoutY="170.0" prefHeight="25.0" prefWidth="179.0" promptText="Status" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="producao" prefHeight="559.0" prefWidth="358.0">
+         <children>
+            <TextField fx:id="ProducaoProducao" layoutX="44.0" layoutY="124.0" prefHeight="5.0" prefWidth="179.0" promptText="Produção" />
+            <Button layoutX="28.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnProducaoTotal" prefHeight="25.0" prefWidth="96.0" text="Produção total" />
+            <Button layoutX="128.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnAbelhaJatai" prefHeight="25.0" prefWidth="85.0" text="Abelha Jatai" />
+            <Button layoutX="219.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnAbelhaAmericana" prefHeight="25.0" prefWidth="112.0" text="Abelha americana" />
+            <Button layoutX="49.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnFuncionarioClicked" prefHeight="30.0" prefWidth="108.0" text="Funcionários" />
+            <Button layoutX="202.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnColmeiaClicked" prefHeight="30.0" prefWidth="108.0" text="Colmeias" />
+            <Label layoutX="138.0" layoutY="30.0" text="Produção">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="246.0" layoutY="97.0" mnemonicParsing="false" onAction="#btnBuscarProducao" text="Buscar" />
+            <Label fx:id="avisoTextoProducao" layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="304.0" />
+            <Button layoutX="123.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnAlterarProducao" text="Alterar" />
+            <Button layoutX="185.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnExcluirProducao" prefWidth="50.0" text="Excluir" />
+            <DatePicker fx:id="diaProducao" layoutX="44.0" layoutY="97.0" prefHeight="25.0" prefWidth="179.0" promptText="Data" />
+            <TextField fx:id="IDProducao" layoutX="44.0" layoutY="66.0" prefHeight="5.0" prefWidth="179.0" promptText="ID" />
+            <TextField fx:id="tipoProducaoProd" layoutX="44.0" layoutY="155.0" prefHeight="5.0" prefWidth="179.0" promptText="Tipo" />
+            <Button layoutX="247.0" layoutY="136.0" mnemonicParsing="false" onAction="#btnProducaoInserir" text="Inserir" />
+            <TableView fx:id="tabelaProducao" layoutX="21.0" layoutY="269.0" prefHeight="200.0" prefWidth="318.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colTipo" prefWidth="70.0" text="Tipo" />
+                  <TableColumn fx:id="colQuantidade" prefWidth="70.0" text="Quantidade" />
+                  <TableColumn fx:id="colData" prefWidth="70.0" text="Data" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
